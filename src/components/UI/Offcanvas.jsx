@@ -1,11 +1,17 @@
-import React from 'react'
+import { Fragment } from 'react'
+import './Offcanvas.css'
 
-const Offcanvas = () => {
+const Offcanvas = (props) => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <Fragment>
+      <div className="backdrop" onClick={props.onClose} />
+      <div className="offcanvas">
+        <div className="content">{props.children}</div>
+      </div>
+    </Fragment>
+  );
+};
+
+
 
 export default Offcanvas
